@@ -49,7 +49,7 @@ export default function Header() {
                     </div>
 
                     <div className={styles.header__top_actions}>
-                        <Button className={styles.header__btn}>
+                        <Button className={styles.header__btn} href={"/get-in-touch"}>
                             Get in Touch
                         </Button>
 
@@ -96,7 +96,7 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <Button className={styles.header__btn}>
+                    <Button className={styles.header__btn} href={"/get-in-touch"}>
                         Get in Touch
                     </Button>
 

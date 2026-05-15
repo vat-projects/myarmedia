@@ -1,0 +1,137 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.who_hero {
+    padding-top: 40px;
+
+    &__description {
+        max-width: 610px;
+        margin-bottom: 26px;
+
+        span {
+            display: inline;
+            color: #000;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+    }
+
+    &__image {
+        height: 542px;
+        border-radius: 0 40px;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            border-radius: inherit;
+
+            @include mobile {
+                height: 100%;
+            }
+        }
+
+        @include mobile {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__item_top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        .who_hero__item_content {
+            border-radius: 0 0 32px 0;
+
+            @include mobile {
+                border-radius: 0 0 32px 32px;
+            }
+        }
+
+        &>:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        &>:nth-child(3) {
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        svg {
+            margin-left: auto;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .who_hero__item_content {
+            border-radius: 32px 0 0 0;
+
+            @include mobile {
+                border-radius: 32px 32px 0 0;
+            }
+        }
+
+        &>:nth-child(2) {
+            position: absolute;
+            top: -33px;
+            right: 0;
+        }
+
+        &>:nth-child(3) {
+            position: absolute;
+            left: -33px;
+            bottom: 0;
+        }
+    }
+
+    &__item_content {
+        padding: 24px;
+        background: #FFF;
+        max-width: 435px;
+        width: 100%;
+
+        @include mobile {
+            padding: 16px;
+        }
+
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__link_wrapper {
+        @include mobile {
+            &>* {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        padding-block: 11px;
+
+        @include mobile {
+            flex-grow: 1;
+        }
+    }
+
+    @include mobile {
+        svg {
+            display: none;
+        }
+    }
+}

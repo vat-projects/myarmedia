@@ -51,7 +51,6 @@ ul {
 
 img, video {
     display: block;
-    width: auto;
     height: auto;
     max-width: 100%;
 }
@@ -66,6 +65,7 @@ a, button {
 
 button {
     border: none;
+    background: transparent;
 }
 
 svg {
@@ -76,10 +76,24 @@ svg {
     margin-bottom: 80px;
 }
 
+.section-bottom-space-100 {
+    margin-bottom: 100px;
+
+    @include mobile {
+        margin-bottom: 80px;
+    }
+}
+
 .text-style {
     font-size: 16px;
     line-height: 1.1875;
     font-weight: 500;
+}
+
+.text-style-two {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1667;
 }
 
 .text-style--black {
@@ -117,12 +131,27 @@ svg {
     }
 }
 
+h1 {
+    font-size: 62px;
+    line-height: 1.1775;
+    margin-bottom: 24px;
+    font-weight: 400;
+
+    @include tablet-down {
+        font-size: 46px;
+    }
+}
+
 h2 {
     color: #000;
     font-size: 32px;
     font-weight: 500;
     line-height: 1.1875;
     margin-bottom: 24px;
+
+    @include tablet-down {
+        font-size: 28px;
+    }
 }
 
 .text-right {

@@ -4,51 +4,47 @@ import Button from "@/components/Button";
 
 export default function HomePartnership() {
     return (
-        <div className={`${styles.home_partnership} section-bottom-space-80`}>
+        <div className="section-bottom-space-80">
             <div className="container">
                 <div className={styles.home_partnership__bottom}>
-                    <div className={`${styles.home_partnership__image}`}>
+                    <div className={`${styles.home_partnership__icon} show-element-on-different-device`}>
                         <Image
-                            src={'/home/partnership.png'}
+                            src={'/who-we-are/next.svg'}
                             alt="Image"
-                            fill
-                            sizes="(max-width: 1240px) 100vw, 1240px"
-                            loading="eager"
+                            width={141}
+                            height={109}
+                            loading="lazy"
+                        />
+
+                        <Image
+                            src={'/who-we-are/next-mobile.svg'}
+                            alt="Image"
+                            width={163}
+                            height={160}
+                            loading="lazy"
                         />
                     </div>
-                    <div className={styles.home_partnership__item}>
-                        <div className={styles.home_partnership__icon}>
-                            <Image
-                                src={'/home/partnership-icon.svg'}
-                                alt="Image"
-                                width={235}
-                                height={235}
-                                loading="lazy"
-                            />
-                        </div>
 
-                        <div className={styles.home_partnership__content}>
-                            <h2 className={styles.home_partnership__title}>
-                                Make It Convert: Start With the Right Partnership
-                            </h2>
+                    <h2 className={styles.home_partnership__title}>
+                        Make It Convert: Start With the Right Partnership
+                    </h2>
 
-                            <p className={styles.home_partnership__subtitle}>
-                                Looking for scalable traffic, stronger campaign performance, or reliable monetization
-                                opportunities?
-                            </p>
+                    <p className={`${styles.home_partnership__title} text-style-two text-style--white-75`}>
+                        Looking for scalable traffic, stronger campaign performance, or reliable monetization opportunities?
+                    </p>
 
-                            <p className="text-style text-style--white-75">
-                                Submit your request, and our team will get in touch to discuss the best approach for
-                                your
-                                goals.
-                            </p>
+                    <p className={`${styles.home_partnership__description} text-style text-style--white-75`}>
+                        Submit your request, and our team will get in touch to discuss the best approach for your goals.
+                    </p>
 
-                            <div className={`${styles.home_partnership__btn_wrapper} text-right`}>
-                                <Button style={'white'} icon className={styles.home_partnership__btn}>
-                                    Apply Now
-                                </Button>
-                            </div>
-                        </div>
+                    <div className={`${styles.home_partnership__btn_wrapper} text-right`}>
+                        <Button
+                            type={'btn'}
+                            style={'white'}
+                            icon
+                            className={styles.home_partnership__btn}>
+                            Apply Now
+                        </Button>
                     </div>
                 </div>
             </div>

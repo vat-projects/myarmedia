@@ -1,0 +1,61 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.who_businesses {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        padding: 15px 16px;
+        border-radius: 24px;
+        border: 1px solid #E6E5E7;
+    }
+
+    &__item_top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    &__item_image {
+        display: flex;
+        flex: 0 0 40px;
+        height: 40px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: var(--Gradient, linear-gradient(180deg, #FDE1D4 0%, #E7D4FE 50%, #FAF8F6 100%));
+    }
+
+    &__item_title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.1667;
+
+        @include tablet-down {
+            font-size: 16px;
+            line-height: 1.1875;
+        }
+    }
+}

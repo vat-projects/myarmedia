@@ -1,0 +1,67 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.who_our_approach {
+    &__container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 3.1356fr 1fr;
+
+        @include tablet-down {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__list>*:not(:last-child) {
+        margin-bottom: 19px;
+        border-bottom: 1px solid #E6E5E7;
+    }
+
+    &__item {
+        padding: 24px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &>*:last-child {
+            max-width: 375px;
+        }
+
+        @include tablet-down {
+            padding-inline: 0;
+        }
+    }
+
+    &__item_title {
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 24px;
+        line-height: 1.1667;
+        font-weight: 500;
+    }
+
+    &__image {
+        position: relative;
+
+        @include tablet-up {
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

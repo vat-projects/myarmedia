@@ -1,6 +1,7 @@
 @use '@/lib/styles/mixin.scss' as *;
 
-.home_partnership {
+
+.who_next {
     &__bottom {
         position: relative;
         max-width: 816px;
@@ -16,10 +17,6 @@
 
     &__title {
         color: #FFF;
-        margin-bottom: 32px;
-    }
-
-    &__title {
         margin-bottom: 32px;
     }
 
