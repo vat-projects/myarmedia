@@ -1,0 +1,58 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.home_performance {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 24px;
+
+        @include tablet-down {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        padding: 16px;
+        border-radius: 24px;
+        border: 1px solid #E6E5E7;
+
+        &>*:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__item_image {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: var(--Gradient, linear-gradient(180deg, #FDE1D4 0%, #E7D4FE 50%, #FAF8F6 100%));
+    }
+
+    &__link_wrapper {
+        text-align: right;
+
+        @include mobile {
+            &>* {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        padding-inline: 23px;
+
+        @include mobile {
+            flex-grow: 1;
+        }
+    }
+}

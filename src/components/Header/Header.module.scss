@@ -1,0 +1,154 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.header {
+    padding-top: 16px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 16px;
+        align-items: center;
+
+        @include tablet-up {
+            .header__logo {
+                display: none;
+            }
+        }
+
+        @include tablet-down {
+            .header__socials,
+            .header__top_contact {
+                display: none;
+            }
+        }
+    }
+
+    &__top_contact {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: flex-start;
+        color: #000;
+        font-size: 12px;
+        line-height: 1.167;
+    }
+
+    &__top_actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        @include tablet-up {
+            display: none;
+        }
+    }
+
+    @include tablet-down {
+        & .header__btn {
+            padding-block: 11px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px 20px;
+
+        @include tablet-up {
+            &>*:first-child {
+                flex-shrink: 0;
+            }
+
+            &>*:last-child {
+                flex-shrink: 0;
+            }
+
+            .header__socials,
+            .header__top_contact {
+                display: none;
+            }
+        }
+
+        @include tablet-down {
+            .header__btn,
+            .header__logo {
+                display: none;
+            }
+
+            &:not(.show) {
+                display: none;
+            }
+
+            & {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    &__logo {
+        color: #141414;
+        font-size: 36px;
+        line-height: 1.167;
+    }
+
+    &__logo_title {
+        color: #141414;
+        font-size: 36px;
+        line-height: 1.1667;
+        display: block;
+    }
+
+    &__logo_subtitle {
+        color: rgba(13, 7, 23, 0.50);
+        font-size: 12px;
+        line-height: 1.167;
+        display: block;
+    }
+
+    &__nav {
+        display: flex;
+        padding: 15px 24px;
+        align-items: center;
+        gap: 32px 24px;
+        border-radius: 500px;
+        border: 1px solid #E6E5E7;
+
+        @include tablet-down {
+            & {
+                flex-direction: column;
+                border: none;
+                border-radius: 0;
+                width: 100%;
+                padding: 16px 0;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__nav_link {
+        font-size: 16px;
+        line-height: 1.1875;
+    }
+
+    &__btn_open_mobile_menu {
+        display: flex;
+        width: 43px;
+        height: 43px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: #E6E5E7;
+    }
+}
+
+.show {
+}
+
+.active {
+}

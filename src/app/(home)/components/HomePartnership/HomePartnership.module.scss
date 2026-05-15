@@ -1,0 +1,100 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.home_partnership {
+    &__bottom {
+        position: relative;
+    }
+
+    &__image {
+        height: 693px;
+        border-radius: 40px;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            border-radius: inherit;
+
+            @include mobile {
+                height: 100%;
+            }
+        }
+
+        @include mobile {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 585px;
+        width: 100%;
+
+        @include mobile-up {
+            right: 24px;
+            transform: translateY(-50%);
+        }
+
+        @include mobile {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 32px);
+        }
+    }
+
+    &__content {
+        padding: 32px;
+        border-radius: 32px;
+        background: linear-gradient(95deg, #005DC3 4.39%, rgba(0, 0, 64, 0.00) 96.09%), linear-gradient(95deg, #005DC3 4.39%, #000040 96.09%), #E6E5E7;
+
+        @include tablet-down {
+            padding: 24px 16px;
+        }
+
+        &>*:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+
+    &__title {
+        color: #FFF;
+        margin-bottom: 0;
+    }
+
+    &__subtitle {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1667;
+    }
+
+    @include mobile {
+        &__btn_wrapper>* {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        & + * {
+            border-color: #FFF;
+        }
+
+        & + * > svg path {
+            fill: #FFF;
+        }
+
+        @include mobile {
+            flex-grow: 1;
+        }
+    }
+
+    &__icon {
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

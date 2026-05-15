@@ -1,0 +1,130 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+:root {
+    --background: #ffffff;
+    --foreground: #000;
+}
+
+html {
+    height: 100%;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--foreground);
+    background: var(--background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1272px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img, video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+span {
+    display: inline-block;
+}
+
+a, button {
+    transition: all .3s ease;
+}
+
+button {
+    border: none;
+}
+
+svg {
+    display: block;
+}
+
+.section-bottom-space-80 {
+    margin-bottom: 80px;
+}
+
+.text-style {
+    font-size: 16px;
+    line-height: 1.1875;
+    font-weight: 500;
+}
+
+.text-style--black {
+    color: #000;
+}
+
+.text-style--black-50 {
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.text-style--black-75 {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.text-style--white-75 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.text-style--white {
+    color: #FFF;
+}
+
+.show-element-on-different-device {
+    &>*:first-child {
+        @include mobile {
+           display: none;
+        }
+    }
+
+    &>*:last-child {
+        @include mobile-up {
+            display: none;
+        }
+    }
+}
+
+h2 {
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.1875;
+    margin-bottom: 24px;
+}
+
+.text-right {
+    text-align: right;
+}

@@ -1,0 +1,42 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.home_snapshot {
+    &__inner {
+        border-radius: 24px;
+        background: linear-gradient(95deg, #005DC3 4.39%, rgba(0, 0, 64, 0.00) 96.09%), linear-gradient(91deg, #005DC3 0.16%, #000040 101.23%);
+        padding: 32px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        color: #FFF;
+    }
+
+    &__icon {
+        position: absolute;
+        top: -55px;
+        right: -55px;
+        z-index: -1;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+
+        @include tablet-down {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item_title {
+        color: #FFF;
+        font-size: 62px;
+        line-height: 1.2742;
+    }
+}
