@@ -25,3 +25,17 @@ $light: #808080;
     @content;
   }
 }
+
+@mixin vertical-marquee($duration: 15000ms) {
+  animation: vertical-marquee $duration linear infinite forwards;
+}
+
+@keyframes vertical-marquee {
+  0% {
+    transform: translateY(-1em);
+  }
+
+  100% {
+    transform: translateY(calc(-100% - 2em));
+  }
+}

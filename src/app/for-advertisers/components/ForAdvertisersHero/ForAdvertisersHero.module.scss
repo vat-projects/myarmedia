@@ -1,7 +1,7 @@
 @use '@/lib/styles/mixin.scss' as *;
 
 
-.who_hero {
+.for_advertisers {
     padding-top: 40px;
 
     &__description {
@@ -43,11 +43,13 @@
         left: 0;
         z-index: 1;
 
-        .who_hero__item_content {
+        .for_advertisers__item_content {
             border-radius: 0 0 32px 0;
+            padding: 24px;
 
             @include mobile {
                 border-radius: 0 0 32px 32px;
+                padding: 16px;
             }
         }
 
@@ -77,11 +79,13 @@
             }
         }
 
-        .who_hero__item_content {
+        .for_advertisers__item_content {
             border-radius: 32px 0 0 0;
+            padding: 24px 24px 0 24px;
 
             @include mobile {
                 border-radius: 32px 32px 0 0;
+                padding: 24px 16px 0 16px;
             }
         }
 
@@ -99,14 +103,9 @@
     }
 
     &__item_content {
-        padding: 24px;
         background: #FFF;
         max-width: 435px;
         width: 100%;
-
-        @include mobile {
-            padding: 16px;
-        }
 
         &>*:not(:last-child) {
             margin-bottom: 16px;
@@ -132,14 +131,6 @@
     @include mobile {
         svg {
             display: none;
-        }
-    }
-
-    @include tablet-down {
-        .who_hero__title {
-            font-size: 46px;
-            letter-spacing: -0.92px;
-            line-height: 1.174;
         }
     }
 }

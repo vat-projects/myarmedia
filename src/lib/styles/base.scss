@@ -74,13 +74,17 @@ svg {
 
 .section-bottom-space-80 {
     margin-bottom: 80px;
+
+    @include mobile {
+        margin-bottom: 64px;
+    }
 }
 
 .section-bottom-space-100 {
     margin-bottom: 100px;
 
     @include mobile {
-        margin-bottom: 80px;
+        margin-bottom: 64px;
     }
 }
 
@@ -88,12 +92,22 @@ svg {
     font-size: 16px;
     line-height: 1.1875;
     font-weight: 500;
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 1.143;
+    }
 }
 
 .text-style-two {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.1667;
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 1.1875;
+    }
 }
 
 .text-style--black {
@@ -106,6 +120,14 @@ svg {
 
 .text-style--black-75 {
     color: rgba(0, 0, 0, 0.75);
+}
+
+.text-style--white-60 {
+    color: rgba(255, 255, 255, 0.6);
+
+    span {
+        color: #FFF;
+    }
 }
 
 .text-style--white-75 {
@@ -138,7 +160,8 @@ h1 {
     font-weight: 400;
 
     @include tablet-down {
-        font-size: 46px;
+        font-size: 48px;
+        line-height: 1.1667;
     }
 }
 
@@ -151,6 +174,7 @@ h2 {
 
     @include tablet-down {
         font-size: 28px;
+        line-height: 1.1786;
     }
 }
 

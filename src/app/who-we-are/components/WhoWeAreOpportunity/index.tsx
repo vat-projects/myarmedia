@@ -1,26 +1,6 @@
 import styles from './WhoWeAreOpportunity.module.scss';
 import Image from "next/image";
-import Button from "@/components/Button";
 import IconAsterisk from "@/components/icons/IconAsterisk";
-
-const list = [
-    {
-        id: 'performance-results-one',
-        title: 'Improve conversion quality',
-    },
-    {
-        id: 'performance-results-two',
-        title: 'Scale campaign performance',
-    },
-    {
-        id: 'performance-results-three',
-        title: 'Increase revenue opportunities',
-    },
-    {
-        id: 'performance-results-four',
-        title: 'Optimize traffic efficiency',
-    },
-]
 
 export default function WhoWeAreOpportunity() {
     return (

@@ -1,20 +1,20 @@
-import styles from './WhoWeAreHero.module.scss';
+import styles from './ForAdvertisersHero.module.scss';
 import Image from "next/image";
 import Button from "@/components/Button";
 
-export default function WhoWeAreHero() {
+export default function ForAdvertisersHero() {
     return (
-        <div className={`${styles.who_hero} section-bottom-space-100`}>
+        <div className={`${styles.for_advertisers} section-bottom-space-100`}>
             <div className="container">
-                <h1 className={styles.who_hero__title}>
-                    Built for the Performance Era
+                <h1>
+                    Built for Smarter Acquisition
                 </h1>
 
-                <div className={styles.who_hero__bottom}>
-                    <div className={styles.who_hero__item_top}>
-                        <div className={styles.who_hero__item_content}>
-                            <p className={`${styles.who_hero__item_description} text-style`}>
-                                Myar is a modern affiliate network built around scalable partnerships, adaptable growth strategies, and performance-focused collaboration.
+                <div className={styles.for_advertisers__bottom}>
+                    <div className={styles.for_advertisers__item_top}>
+                        <div className={styles.for_advertisers__item_content}>
+                            <p className="text-style">
+                                Myar helps advertisers navigate evolving digital markets through scalable traffic partnerships, adaptable campaign structures, and performance-focused growth strategies.
                             </p>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
@@ -25,25 +25,24 @@ export default function WhoWeAreHero() {
                         </svg>
                     </div>
 
-                    <div className={`${styles.who_hero__image}`}>
+                    <div className={`${styles.for_advertisers__image}`}>
                         <Image
-                            src={'/who-we-are/hero.png'}
+                            src={'/for-advertisers/hero.png'}
                             alt="Image"
                             fill
                             sizes="(max-width: 1240px) 100vw, 1240px"
                             loading="eager"
                         />
                     </div>
-                    <div className={styles.who_hero__item}>
-                        <div className={styles.who_hero__item_content}>
-                            <p className={`${styles.who_hero__item_description} text-style`}>
-                                We help advertisers and publishers navigate evolving digital markets through smarter
-                                traffic solutions and long-term performance opportunities.
+                    <div className={styles.for_advertisers__item}>
+                        <div className={styles.for_advertisers__item_content}>
+                            <p className="text-style">
+                                Our approach is designed to support sustainable acquisition opportunities while helping brands operate more efficiently across changing traffic environments and audience behaviors.
                             </p>
 
-                            <div className={styles.who_hero__link_wrapper}>
-                                <Button className={styles.who_hero__link} href={"/get-in-touch"}>
-                                    Get in Touch
+                            <div className={styles.for_advertisers__link_wrapper}>
+                                <Button className={styles.for_advertisers__link} href={"/get-in-touch"}>
+                                    Start a Partnership
                                 </Button>
                             </div>
                         </div>

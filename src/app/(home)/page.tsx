@@ -7,6 +7,7 @@ import HomeIndustriesSupport from "./components/HomeIndustriesSupport";
 import HomePerformanceResults from "./components/HomePerformanceResults";
 import HomePartnershipProcess from "./components/HomePartnershipProcess";
 import HomePartnership from "./components/HomePartnership";
+import HomeCompliance from "./components/HomeCompliance";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         <HomeBuiltFor />
         <HomeWhyChoose />
         <HomeIndustriesSupport />
+        <HomeCompliance />
         <HomePerformanceResults />
         <HomePartnershipProcess />
         <HomePartnership />
