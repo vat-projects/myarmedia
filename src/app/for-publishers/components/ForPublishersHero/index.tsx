@@ -1,20 +1,20 @@
-import styles from './ForAdvertisersHero.module.scss';
+import styles from './ForPublishersHero.module.scss';
 import Image from "next/image";
 import Button from "@/components/Button";
 
-export default function ForAdvertisersHero() {
+export default function ForPublishers() {
     return (
-        <div className={`${styles.for_advertisers} section-bottom-space-100`}>
+        <div className={`${styles.for_publishers_hero} section-bottom-space-100`}>
             <div className="container">
-                <h1>
-                    Built for Smarter Acquisition
+                <h1 className={styles.for_publishers_hero__title}>
+                    Built for Traffic That Wants to Grow
                 </h1>
 
-                <div className={styles.for_advertisers__bottom}>
-                    <div className={styles.for_advertisers__item_top}>
-                        <div className={styles.for_advertisers__item_content}>
+                <div className={styles.for_publishers_hero__bottom}>
+                    <div className={styles.for_publishers_hero__item_top}>
+                        <div className={styles.for_publishers_hero__item_content}>
                             <p className="text-style">
-                                Myar helps advertisers navigate evolving digital markets through scalable traffic partnerships, adaptable campaign structures, and performance-focused growth strategies.
+                                Myar works with publishers looking to build stronger monetization opportunities through scalable partnerships and performance-focused campaign environments.
                             </p>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
@@ -25,30 +25,31 @@ export default function ForAdvertisersHero() {
                         </svg>
                     </div>
 
-                    <div className={`${styles.for_advertisers__image} show-element-on-different-device`}>
+                    <div className={`${styles.for_publishers_hero__image} show-element-on-different-device`}>
                         <Image
-                            src={'/for-advertisers/hero.png'}
+                            src={'/for-publishers/hero.png'}
                             alt="Image"
                             fill
                             sizes="(max-width: 1240px) 100vw, 1240px"
                             loading="eager"
                         />
+
                         <Image
-                            src={'/for-advertisers/hero-mobile.png'}
+                            src={'/for-publishers/hero-mobile.png'}
                             alt="Image"
                             width={358}
-                            height={546}
+                            height={280}
                             loading="eager"
                         />
                     </div>
-                    <div className={styles.for_advertisers__item}>
-                        <div className={styles.for_advertisers__item_content}>
+                    <div className={styles.for_publishers_hero__item}>
+                        <div className={styles.for_publishers_hero__item_content}>
                             <p className="text-style">
-                                Our approach is designed to support sustainable acquisition opportunities while helping brands operate more efficiently across changing traffic environments and audience behaviors.
+                                We support traffic owners operating across evolving digital channels by helping them connect with adaptable campaign opportunities designed for long-term growth potential.
                             </p>
 
-                            <div className={styles.for_advertisers__link_wrapper}>
-                                <Button className={styles.for_advertisers__link} href={"/get-in-touch"}>
+                            <div className={styles.for_publishers_hero__link_wrapper}>
+                                <Button className={styles.for_publishers_hero__link} href={"/get-in-touch"}>
                                     Start a Partnership
                                 </Button>
                             </div>

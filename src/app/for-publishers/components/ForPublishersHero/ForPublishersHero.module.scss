@@ -1,8 +1,18 @@
 @use '@/lib/styles/mixin.scss' as *;
 
 
-.for_advertisers {
+.for_publishers_hero {
     padding-top: 40px;
+
+    &__title {
+        margin-bottom: 100px;
+        text-align: center;
+
+        @include tablet-down {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+    }
 
     &__description {
         max-width: 610px;
@@ -42,13 +52,19 @@
         left: 0;
         z-index: 1;
 
-        .for_advertisers__item_content {
-            border-radius: 0 0 32px 0;
+        @include mobile {
+            position: static;
+        }
+
+        .for_publishers_hero__item_content {
             padding: 24px;
 
+            @include mobile-up {
+                border-radius: 0 0 32px 0;
+            }
+
             @include mobile {
-                border-radius: 0 0 32px 32px;
-                padding-inline: 16px;
+                padding: 24px 16px;
             }
         }
 
@@ -70,6 +86,10 @@
         bottom: 0;
         right: 0;
 
+        @include mobile {
+            position: static;
+        }
+
         svg {
             margin-left: auto;
 
@@ -78,12 +98,14 @@
             }
         }
 
-        .for_advertisers__item_content {
-            border-radius: 32px 0 0 0;
+        .for_publishers_hero__item_content {
             padding: 24px 24px 0 24px;
 
+            @include mobile-up {
+                border-radius: 32px 0 0 0;
+            }
+
             @include mobile {
-                border-radius: 32px 32px 0 0;
                 padding: 24px 16px 0 16px;
             }
         }
