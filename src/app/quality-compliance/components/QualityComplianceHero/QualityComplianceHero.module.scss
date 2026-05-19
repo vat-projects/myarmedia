@@ -1,0 +1,142 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.quality_compliance_hero {
+    padding-top: 40px;
+
+    &__title {
+        margin-bottom: 100px;
+        text-align: center;
+
+        @include tablet-down {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        max-width: 610px;
+        margin-bottom: 26px;
+
+        span {
+            display: inline;
+            color: #000;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+    }
+
+    &__image {
+        position: relative;
+        height: 542px;
+
+        @include mobile-up {
+            border-radius: 0 40px;
+        }
+
+        img {
+            border-radius: inherit;
+        }
+    }
+
+    &__item_top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+
+        .quality_compliance_hero__item_content {
+            padding: 24px;
+            border-radius: 0 0 32px 0;
+
+            @include mobile {
+                padding: 24px 16px;
+                border-radius: 0 0 32px 32px;
+            }
+        }
+
+        &>:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        &>:nth-child(3) {
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        svg {
+            margin-left: auto;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .quality_compliance_hero__item_content {
+            padding: 24px 24px 0 24px;
+            border-radius: 32px 0 0 0;
+
+            @include mobile {
+                border-radius: 32px 32px 0 0;
+                padding: 24px 16px 0 16px;
+            }
+        }
+
+        &>:nth-child(2) {
+            position: absolute;
+            top: -33px;
+            right: 0;
+        }
+
+        &>:nth-child(3) {
+            position: absolute;
+            left: -33px;
+            bottom: 0;
+        }
+    }
+
+    &__item_content {
+        background: #FFF;
+        width: 100%;
+        max-width: 435px;
+
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__link_wrapper {
+        @include mobile {
+            &>* {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        padding-block: 11px;
+
+        @include mobile {
+            flex-grow: 1;
+        }
+    }
+
+    @include mobile {
+        svg {
+            display: none;
+        }
+    }
+}

@@ -5,7 +5,7 @@ import PerformanceSolutionsOperate from "./components/PerformanceSolutionsOperat
 import PerformanceSolutionsFlexibility from "./components/PerformanceSolutionsFlexibility";
 import PerformanceSolutionsSystems from "./components/PerformanceSolutionsSystems";
 
-export default function PerformanceSolutionsHeroPage() {
+export default function PerformanceSolutionsPage() {
     return (
         <>
             <PerformanceSolutionsHero />

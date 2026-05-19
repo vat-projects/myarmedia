@@ -1,0 +1,108 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.quality_compliance_info {
+    &__container {
+        display: grid;
+        grid-template-columns: 1.41585fr 1fr;
+        gap: 24px 20px;
+        align-items: center;
+
+        @include tablet-down {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 24px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+
+    &__item {
+        padding: 32px;
+        border-radius: 32px;
+        background: linear-gradient(95deg, #FDE1D4 0.59%, #E7D4FE 50.29%, #FAF8F6 100%), #E6E5E7;
+
+        @include tablet-down {
+            padding: 24px;
+        }
+    }
+
+    &__item_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item_title {
+        margin-bottom: 0;
+    }
+
+    &__right>*:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__item_description>*:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__item_space_32>*:not(:last-child) {
+        margin-bottom: 32px;
+
+        @include tablet-down {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__item_space_24>*:not(:last-child) {
+        margin-bottom: 24px;
+
+        @include tablet-down {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__item_list {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__item_list_item {
+        padding: 8px 16px;
+        border-radius: 500px;
+        background: #FFF;
+    }
+
+    &__includes_title,
+    &__priority_title {
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1667;
+    }
+
+    &__priority_title {
+        margin-bottom: 16px;
+    }
+
+    &__priority {
+        &>*:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__priority_item {
+        padding: 8px 16px;
+        border-radius: 500px;
+        background: #FFF;
+        width: max-content;
+    }
+}

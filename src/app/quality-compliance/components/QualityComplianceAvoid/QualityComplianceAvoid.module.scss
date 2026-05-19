@@ -1,0 +1,53 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.quality_compliance_avoid {
+    &__inner {
+        position: relative;
+        z-index: 1;
+        padding: 40px;
+        border-radius: 32px;
+
+        @include tablet-down {
+            padding: 24px 16px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 32px;
+
+        @include tablet-down {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        max-width: 640px;
+
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+
+        @include mobile-up {
+            bottom: 0;
+            right: 0;
+        }
+
+        @include mobile {
+            top: -32px;
+            right: -16px;
+        }
+    }
+}
