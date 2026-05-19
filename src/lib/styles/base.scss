@@ -66,6 +66,7 @@ a, button {
 button {
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 svg {
@@ -120,6 +121,10 @@ svg {
 
 .text-style--black-75 {
     color: rgba(0, 0, 0, 0.75);
+}
+
+.text-style--white-50 {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .text-style--white-60 {
