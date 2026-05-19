@@ -1,0 +1,85 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.industries_accordion {
+    &__items {
+        & > *:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__item {
+        padding: 24px 32px;
+        border-radius: 32px;
+        border: 1px solid #E6E5E7;
+        background: #FFF;
+        transition: background-color 0.3s ease;
+
+        @include tablet-down {
+            padding: 24px 16px;
+        }
+    }
+
+    &__item_open {
+        background: #EBEBF3;
+
+        .industries_accordion__content {
+            display: block;
+        }
+
+        .industries_accordion__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+        gap: 16px;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-width: 0;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.15;
+
+        @include tablet-down {
+            font-size: 16px;
+            line-height: 1.1875;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        width: 51px;
+        height: 51px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid #000;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        display: none;
+        max-width: 610px;
+        padding-top: 16px;
+        padding-left: 40px;
+
+        @include tablet-down {
+            padding-left: 0;
+        }
+    }
+}
