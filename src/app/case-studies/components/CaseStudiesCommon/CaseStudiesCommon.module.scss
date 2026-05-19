@@ -1,0 +1,40 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.case_studies_common {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__list>*:not(:last-child) {
+        margin-bottom: 19px;
+
+        @include tablet-down {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__item {
+        padding: 24px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #E6E5E7;
+
+        &>*:last-child {
+            max-width: 375px;
+        }
+
+        @include tablet-down {
+            padding: 16px 0;
+        }
+    }
+}

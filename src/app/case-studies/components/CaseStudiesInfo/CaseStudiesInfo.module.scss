@@ -1,0 +1,327 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.case_studies_info {
+    &__items {
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__item {
+        padding: 24px;
+        border-radius: 32px;
+        border: 1px solid #E6E5E7;
+
+        @include tablet-down {
+            padding: 24px 8px;
+        }
+    }
+
+    &__inner_open {
+        .case_studies_info__item_content {
+            display: block;
+        }
+
+        .case_studies_info__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1875;
+        margin-bottom: 0;
+
+        @include tablet-down {
+            font-size: 24px;
+            line-height: 1.1667;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        width: 51px;
+        height: 51px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        transition: all .3s ease;
+        flex-shrink: 0;
+    }
+
+    &__item_content {
+        display: none;
+        max-width: 820px;
+        margin: 40px auto 0 auto;
+
+        @include tablet-down {
+            margin-top: 32px;
+        }
+
+        &>*:not(:last-child) {
+            margin-bottom: 40px;
+
+            @include tablet-down {
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    // Overview
+
+    &__overview {
+        padding: 32px;
+        border-radius: 24px;
+        background: linear-gradient(95deg, #FDE1D4 0.59%, #E7D4FE 50.29%, #FAF8F6 100%), #E6E5E7;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        @include tablet-down {
+            padding-inline: 16px;
+        }
+    }
+
+    &__overview_top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    &__overview_image {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__overview_title {
+        color: #000;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1667;
+
+        @include tablet-down {
+            font-size: 20px;
+            line-height: 1.15;
+        }
+    }
+
+    &___overview_description {
+        &>*:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__overview_icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include mobile {
+            top: -15px;
+            right: -32px;
+        }
+    }
+
+    // Focus
+
+    &__focus {
+        padding: 24px;
+        border-radius: 24px;
+        background: #EBEBF3;
+
+        @include tablet-down {
+           padding-inline: 16px;
+        }
+
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__focus_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__focus_top_left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__focus_area_title {
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    &__focus_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    &__focus_item {
+        padding: 12px 8px;
+        border-radius: 500px;
+        background: #FFF;
+    }
+
+    // Solutions
+
+    &__solutions {
+        &>*:not(:last-child) {
+            margin-bottom: 24px;
+
+            @include tablet-down {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__solutions_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__solutions_list {
+        &>*:not(:last-child) {
+            margin-bottom: 19px;
+
+            @include tablet-down {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__solutions_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        padding: 24px;
+        border-bottom: 1px solid #E6E5E7;
+
+        @include tablet-down {
+           padding: 16px 8px;
+        }
+
+        &>*:last-child {
+            max-width: 375px;
+        }
+    }
+
+    &__solutions_item_title {
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.15;
+
+        @include tablet-down {
+            font-size: 16px;
+            line-height: 1.1875;
+        }
+    }
+
+    &__outcome {
+        padding: 40px;
+        border-radius: 32px;
+        position: relative;
+        z-index: 1;
+
+        @include tablet-down {
+            padding-inline: 16px;
+        }
+    }
+
+    &__outcome_top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 32px;
+
+        @include tablet-down {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__outcome_title {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1875;
+
+        @include tablet-down {
+            font-size: 20px;
+            line-height: 1.15;
+        }
+    }
+
+    &__outcome_description {
+        margin-bottom: 32px;
+
+        &>:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__outcome_btn_wrapper {
+        text-align: right;
+    }
+
+    &__outcome_btn {
+        text-align: right;
+
+        @include mobile {
+            text-align: left;
+        }
+
+        & + * {
+            border-color: #FFF;
+        }
+
+        & + * > svg path {
+            fill: #FFF;
+        }
+
+        @include mobile {
+            padding-block: 7px;
+            flex-grow: 1;
+        }
+    }
+
+
+    &__outcome_icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
