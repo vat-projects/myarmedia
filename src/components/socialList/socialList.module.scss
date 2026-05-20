@@ -4,13 +4,30 @@
     gap: 8px;
 
     &__link {
-        width: 36px;
-        height: 36px;
         padding: 8px;
         border-radius: 8px;
-        background: #E6E5E7;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &--gray {
+            background: #E6E5E7;
+            color: #000;
+        }
+
+        &--blue {
+            background: linear-gradient(180deg, #005DC3 0%, #000040 100%);
+            color: #FFF;
+        }
+
+        &--size--36 {
+            width: 36px;
+            height: 36px;
+        }
+
+        &--size--40 {
+            width: 40px;
+            height: 40px;
+        }
     }
 }

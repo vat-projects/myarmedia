@@ -1,0 +1,54 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.get_in_touch_connect {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 0.4878fr;
+        gap: 20px;
+        align-items: flex-start;
+
+        @include tablet-down {
+            grid-template-columns: 1fr;
+
+            &>*:first-child {
+                order: 2;
+            }
+        }
+    }
+
+    &__item {
+        padding: 32px;
+        border-radius: 32px;
+        background: #E6E5E7;
+
+        &>*:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        @include tablet-down {
+            padding-inline: 16px;
+        }
+    }
+
+    &__item_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item_description {
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__item_title {
+        margin-bottom: 0;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

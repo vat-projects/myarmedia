@@ -25,7 +25,7 @@ const navItems = [
     {
         title: 'Contact',
         items: [
-            { text: 'Get in Touch', href: '/contact' },
+            { text: 'Get in Touch', href: '/get-in-touch' },
         ],
     },
     {
@@ -64,7 +64,7 @@ export default function Footer() {
 
                         <div>
                             <p className={styles.footer__contact_title}>Phone:</p>
-                            <a className={styles.footer__contact_value} href="+447426463899">
+                            <a className={styles.footer__contact_value} href="tel:+447426463899">
                                 +447426463899
                             </a>
                         </div>

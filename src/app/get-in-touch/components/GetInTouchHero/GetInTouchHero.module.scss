@@ -1,0 +1,14 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.get_in_touch_hero {
+    padding-top: 40px;
+
+    &__description {
+        max-width: 669px;
+
+        &>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
