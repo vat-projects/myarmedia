@@ -1,8 +1,14 @@
+'use client';
+
+import { useState } from 'react';
 import styles from './HomePartnership.module.scss';
-import Image from "next/image";
-import Button from "@/components/Button";
+import Image from 'next/image';
+import Button from '@/components/Button';
+import PartnershipRequest from '@/components/modals/PartnershipRequest';
 
 export default function HomePartnership() {
+    const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false);
+
     return (
         <div className="section-bottom-space-80">
             <div className="container">
@@ -42,12 +48,19 @@ export default function HomePartnership() {
                             type={'btn'}
                             style={'white'}
                             icon
-                            className={styles.home_partnership__btn}>
+                            className={styles.home_partnership__btn}
+                            onClick={() => setIsPartnershipModalOpen(true)}
+                        >
                             Apply Now
                         </Button>
                     </div>
                 </div>
             </div>
+
+            <PartnershipRequest
+                isOpen={isPartnershipModalOpen}
+                onCloseAction={() => setIsPartnershipModalOpen(false)}
+            />
         </div>
-    )
+    );
 }

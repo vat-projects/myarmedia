@@ -31,7 +31,7 @@ const navItems = [
     {
         title: 'Legal',
         items: [
-            { text: 'Terms and Conditions', href: '/terms' },
+            { text: 'Terms and Conditions', href: '/terms-and-conditions' },
             { text: 'Privacy Policy', href: '/privacy-policy' },
             { text: 'Cookie Policy', href: '/cookie-policy' },
             { text: 'Refund Policy', href: '/refund-policy' },

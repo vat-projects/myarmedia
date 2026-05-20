@@ -93,7 +93,9 @@ svg {
     font-size: 16px;
     line-height: 1.1875;
     font-weight: 500;
+}
 
+.text-style--mobile {
     @include mobile {
         font-size: 14px;
         line-height: 1.143;
@@ -104,7 +106,9 @@ svg {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.1667;
+}
 
+.text-style-two--mobile {
     @include mobile {
         font-size: 16px;
         line-height: 1.1875;
@@ -185,4 +189,245 @@ h2 {
 
 .text-right {
     text-align: right;
+}
+
+.form {
+    &>*:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    &__label {
+        color: #0D0717;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1667;
+        margin-bottom: 4px;
+    }
+
+    &__radio {
+        &>*:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__radio_item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__radio_custom {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        border: 2px solid #D9D9D9;
+        background: rgba(255, 255, 255, 0.70);
+        flex-shrink: 0;
+    }
+
+    &__radio_item input:checked + &__radio_custom {
+        background: #D9D9D9;
+    }
+
+    &__radio_title {
+        color: rgba(13, 7, 23, 0.75);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.1875;
+    }
+
+    &__agree_value {
+        color: rgba(13, 7, 23, 0.50);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+
+        a {
+            display: inline-block;
+            color: #7676FF;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+        }
+    }
+
+    &__btn {
+        width: max-content;
+        margin-inline: auto;
+        padding: 16px 32px;
+        border-radius: 500px;
+        font-size: 16px;
+        line-height: 1.1875;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0D0717;
+        color: #FFF;
+        font-weight: 400;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, #005DC3 0%, #000040 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: inherit;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+    &__error {
+        color: #F55;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.375;
+    }
+
+    &__input,
+    &__textarea {
+        height: 60px;
+        padding: 8px 16px;
+        border-radius: 24px;
+        border: 1px solid #E6E5E7;
+        background: rgba(255, 255, 255, 0.70);
+        color: rgba(13, 7, 23, 0.25);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        width: 100%;
+        font-family: inherit;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__input-error {
+        border-color: #F55;
+    }
+
+    &__textarea {
+        height: 120px;
+        resize: none;
+        padding: 16px;
+    }
+
+    &__upload {
+        padding: 16px;
+        border-radius: 24px;
+        border: #E6E5E7;
+        background: rgba(255, 255, 255, 0.70);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    &__upload-btn {
+        padding: 16px 50px;
+        border-radius: 32px;
+        background: linear-gradient(99deg, #FDE1D4 41.26%, #E7D4FE 78.95%, #FAF8F6 116.65%);
+        color: rgba(13, 7, 23, 0.60);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.25;
+        cursor: pointer;
+    }
+
+    &__upload-text {
+        color: rgba(13, 7, 23, 0.60);
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.25;
+    }
+
+    &__input-tel {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+    }
+}
+
+.react-international-phone-country-selector-button__button-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.react-international-phone-country-selector-button__dropdown-arrow {
+    width: 20px;
+    height: 20px;
+    background: red;
+    flex: 0 0 20px;
+}
+
+.react-international-phone-flag-emoji {
+    width: 20px;
+}
+
+.react-international-phone-input-container {
+    align-items: center;
+    gap: 16px;
+    display: flex;
+}
+
+.react-international-phone-country-selector-dropdown {
+    position: absolute;
+    height: 100px;
+    overflow: auto;
+    top: 110%;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    outline: none;
+    border-radius: 24px;
+    padding: 16px;
+    z-index: 1;
+}
+
+.react-international-phone-country-selector-dropdown__list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+}
+
+.modal__close-btn {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    border-radius: 500px;
+    color: #000;
+    background: #E6E5E7;
+    transition: all .3s ease;
+
+    &:hover {
+        color: #E6E5E7;
+        background: #000;
+    }
 }

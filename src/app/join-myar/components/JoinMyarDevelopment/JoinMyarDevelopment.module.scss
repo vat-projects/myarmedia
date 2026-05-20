@@ -1,0 +1,42 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+
+.join_myar_development {
+    &__bottom {
+        position: relative;
+        z-index: 1;
+        max-width: 820px;
+        margin-inline: auto;
+        padding: 32px;
+        border-radius: 32px;
+
+        @include tablet-down {
+            padding-inline: 16px;
+        }
+
+        &>*:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        margin-bottom: 0;
+    }
+
+    &__icon {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__subtitle {
+        color: #FFF;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 1.15;
+        }
+    }
+}

@@ -1,9 +1,9 @@
 @use '@/lib/styles/mixin.scss' as *;
 
 
-.for_publishers_monetization {
+.join_myar_marketing {
     &__inner {
-        max-width: 820px;
+        max-width: 814px;
         margin-inline: auto;
         padding: 40px;
         border-radius: 32px;
@@ -20,7 +20,7 @@
         }
 
         @include tablet-down {
-            padding: 24px 16px;
+            padding-inline: 16px;
         }
     }
 

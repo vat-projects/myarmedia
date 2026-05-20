@@ -1,0 +1,33 @@
+@use '@/lib/styles/mixin.scss' as *;
+
+.join_myar_joining {
+    margin-bottom: 64px;
+
+    &__inner {
+        padding: 32px 40px;
+        border-radius: 40px;
+        background: linear-gradient(107deg, #FDE1D4 6.45%, #E7D4FE 65.71%, #FAF8F6 124.97%), #E6E5E7;
+        max-width: 817px;
+        margin-inline: auto;
+
+        @include tablet-down {
+            padding-inline: 16px;
+        }
+    }
+
+    &__top {
+        max-width: 610px;
+        margin: 0 auto 24px auto;
+    }
+
+    &__title {
+        @include tablet-up {
+            text-align: center;
+        }
+    }
+
+    &__form {
+        max-width: 610px;
+        margin-inline: auto;
+    }
+}
